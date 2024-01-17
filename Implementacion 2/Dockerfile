@@ -6,4 +6,4 @@ WORKDIR /Repositorio_Instancias
 ENV GROUP_NUMBER 'Grupo 03'
 RUN pip3 install -r ./bookinfo/src/productpage/requirements.txt
 EXPOSE 9080
-CMD ["python3", "Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith.py", "9080"]
+CMD ["python3", "./bookinfo/src/productpage/productpage_monolith.py", "9080"]
