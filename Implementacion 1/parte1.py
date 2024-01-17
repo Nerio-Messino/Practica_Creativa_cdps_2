@@ -49,7 +49,7 @@ fin.close()
 fout.close()
 
 call(["sudo cp Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith2.py Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith.py"], shell= True)
-call(["sudo rm practica_creativa2/bookinfo/src/productpage/productpage_monolith2.py"], shell= True)
+call(["sudo rm Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith2.py"], shell= True)
 
 
 #Nos ponemos a modificar el titulo del html
