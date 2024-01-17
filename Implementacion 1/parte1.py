@@ -14,7 +14,7 @@ call(["git clone https://github.com/Nerio-Messino/Repositorio_Instancias.git"], 
 call(["pip3 install urllib3"], shell=True)
 call(["pip3 install flask_bootstrap"], shell=True)
 call(["pip3 install chardet"], shell=True)
-call(["pip3 install -r practica_creativa2/bookinfo/src/productpage/requirements.txt"],shell=True) 
+call(["pip3 install -r Repositorio_Instancias/bookinfo/src/productpage/requirements.txt"],shell=True) 
 call(["pip3 install --upgrade requests"], shell=True)#Nos pide que algunas versiones se actualizen a la mas nueva
 call(["sudo apt-get update"], shell=True)
 
