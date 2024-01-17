@@ -21,8 +21,8 @@ call(["sudo apt-get update"], shell=True)
 
 
 #Modificar Group number
-fin = open("practica_creativa2/bookinfo/src/productpage/productpage_monolith.py",'r')
-fout = open("practica_creativa2/bookinfo/src/productpage/productpage_monolith2.py",'w')
+fin = open("Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith.py",'r')
+fout = open("Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith2.py",'w')
 
 for line in fin:
 
@@ -48,13 +48,13 @@ for line in fin:
 fin.close()
 fout.close()
 
-call(["sudo cp practica_creativa2/bookinfo/src/productpage/productpage_monolith2.py practica_creativa2/bookinfo/src/productpage/productpage_monolith.py"], shell= True)
+call(["sudo cp Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith2.py Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith.py"], shell= True)
 call(["sudo rm practica_creativa2/bookinfo/src/productpage/productpage_monolith2.py"], shell= True)
 
 
 #Nos ponemos a modificar el titulo del html
-fin = open("practica_creativa2/bookinfo/src/productpage/templates/productpage.html",'r')
-fout = open("practica_creativa2/bookinfo/src/productpage/templates/productpage2.html",'w')
+fin = open("Repositorio_Instancias/bookinfo/src/productpage/templates/productpage.html",'r')
+fout = open("Repositorio_Instancias/bookinfo/src/productpage/templates/productpage2.html",'w')
 
 for line in fin:
 	if "{% block title %}Simple Bookstore App{% endblock %}" in line:	#Modifica el TITULO de la pestaña
@@ -67,7 +67,7 @@ for line in fin:
 fin.close()
 fout.close()
 
-call(["sudo cp practica_creativa2/bookinfo/src/productpage/templates/productpage2.html practica_creativa2/bookinfo/src/productpage/templates/productpage.html"], shell= True)
-call(["sudo rm practica_creativa2/bookinfo/src/productpage/templates/productpage2.html"], shell= True)
+call(["sudo cp Repositorio_Instancias/bookinfo/src/productpage/templates/productpage2.html Repositorio_Instancias/bookinfo/src/productpage/templates/productpage.html"], shell= True)
+call(["sudo rm Repositorio_Instancias/bookinfo/src/productpage/templates/productpage2.html"], shell= True)
 #-------------------------------------------------------------------------------
-call(["sudo python3 practica_creativa2/bookinfo/src/productpage/productpage_monolith.py 9080"],shell=True)
+call(["sudo python3 Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith.py 9080"],shell=True)
