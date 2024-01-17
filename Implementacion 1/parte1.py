@@ -6,7 +6,7 @@ from subprocess import call
 
 call(["sudo apt-get update"], shell=True)
 call(["sudo apt install python3-pip"], shell=True) 
-call(["git clone https://github.com/CDPS-ETSIT/practica_creativa2.git"], shell=True)
+call(["git clone https://github.com/Nerio-Messino/Repositorio_Instancias.git"], shell=True)
 
 
 #instalamos las cosas necesarias de la carpeta requirements.txt y actualizamos 
