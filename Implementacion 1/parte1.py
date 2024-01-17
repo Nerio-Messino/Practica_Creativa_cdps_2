@@ -4,7 +4,7 @@ from subprocess import call
 
 #instalamos las ultimas actualizaciones y clonamos nuestro repositorio para probar la aplicacion
 
-#call(["sudo apt-get update"], shell=True)
+call(["sudo apt-get update"], shell=True)
 call(["sudo apt install python3-pip"], shell=True) 
 call(["git clone https://github.com/CDPS-ETSIT/practica_creativa2.git"], shell=True)
 
@@ -14,11 +14,10 @@ call(["git clone https://github.com/CDPS-ETSIT/practica_creativa2.git"], shell=T
 call(["pip3 install urllib3"], shell=True)
 call(["pip3 install flask_bootstrap"], shell=True)
 call(["pip3 install chardet"], shell=True)
-
 call(["pip3 install -r practica_creativa2/bookinfo/src/productpage/requirements.txt"],shell=True) 
-#Nos pide que algunas versiones se actualizen a la mas nueva
+call(["pip3 install --upgrade requests"], shell=True)#Nos pide que algunas versiones se actualizen a la mas nueva
 call(["sudo apt-get update"], shell=True)
-call(["pip3 install --upgrade requests"], shell=True)
+
 
 
 #Modificar Group number
