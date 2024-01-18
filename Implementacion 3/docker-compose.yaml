@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  productpage:
+    build: ./productpage
+    ports:
+      - "9080:9080"
+    environment:
+      - GROUPO_NUMERO=45
+
+  details:
+    build: ./details
+    ports:
+      - "9081:9080"
+    environment:
+      - SERVICE_VERSION=v1
+      - ENABLE_EXTERNAL_BOOK_SERVICE=true
+
+  reviews:
+    build: ./reviews
+    ports:
+      - "9082:9080"
+    environment:
+      - SERVICE_VERSION=v1
+      - ENABLE_RATINGS=true
+
+  ratings:
+    build: ./ratings
+    ports:
+      - "9083:9080"
+    environment:
+      - SERVICE_VERSION=v1
