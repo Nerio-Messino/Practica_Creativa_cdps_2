@@ -6,7 +6,7 @@ services:
     ports:
       - "9080:9080"
     environment:
-      - GROUPO_NUMERO=45
+      - GROUPO_NUMERO=03
 
   details:
     build: ./details
