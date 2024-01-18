@@ -51,23 +51,5 @@ fout.close()
 call(["sudo cp Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith2.py Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith.py"], shell= True)
 call(["sudo rm Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith2.py"], shell= True)
 
-
-#Nos ponemos a modificar el titulo del html
-fin = open("Repositorio_Instancias/bookinfo/src/productpage/templates/productpage.html",'r')
-fout = open("Repositorio_Instancias/bookinfo/src/productpage/templates/productpage2.html",'w')
-
-for line in fin:
-	if "{% block title %}Simple Bookstore App{% endblock %}" in line:	#Modifica el TITULO de la pestaña
-	#r, raw para poner caracteres tal cual
-	
-		fout.write("{% block title %}Simple Bookstore App{{details.equipo}}{% endblock %}")
-	
-	else:
-		fout.write(line)
-fin.close()
-fout.close()
-
-call(["sudo cp Repositorio_Instancias/bookinfo/src/productpage/templates/productpage2.html Repositorio_Instancias/bookinfo/src/productpage/templates/productpage.html"], shell= True)
-call(["sudo rm Repositorio_Instancias/bookinfo/src/productpage/templates/productpage2.html"], shell= True)
 #-------------------------------------------------------------------------------
 call(["sudo python3 Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith.py 9080"],shell=True)
