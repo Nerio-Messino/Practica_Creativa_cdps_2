@@ -14,15 +14,15 @@ call(["git clone https://github.com/Nerio-Messino/Repositorio_Instancias.git"], 
 call(["pip3 install urllib3"], shell=True)
 call(["pip3 install flask_bootstrap"], shell=True)
 call(["pip3 install chardet"], shell=True)
-call(["pip3 install -r Repositorio_Instancias/bookinfo/src/productpage/requirements.txt"],shell=True) 
+call(["pip3 install -r practica_creativa2/bookinfo/src/productpage/requirements.txt"],shell=True) 
 call(["pip3 install --upgrade requests"], shell=True)#Nos pide que algunas versiones se actualizen a la mas nueva
 call(["sudo apt-get update"], shell=True)
 
 
 
 #Modificar Group number
-fin = open("Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith.py",'r')
-fout = open("Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith2.py",'w')
+fin = open("practica_creativa2/bookinfo/src/productpage/productpage_monolith.py",'r')
+fout = open("practica_creativa2/bookinfo/src/productpage/productpage_monolith2.py",'w')
 
 for line in fin:
 
@@ -48,8 +48,8 @@ for line in fin:
 fin.close()
 fout.close()
 
-call(["sudo cp Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith2.py Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith.py"], shell= True)
-call(["sudo rm Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith2.py"], shell= True)
+call(["sudo cp practica_creativa2/bookinfo/src/productpage/productpage_monolith2.py practica_creativa2/bookinfo/src/productpage/productpage_monolith.py"], shell= True)
+call(["sudo rm practica_creativa2/bookinfo/src/productpage/productpage_monolith2.py"], shell= True)
 
 #-------------------------------------------------------------------------------
-call(["sudo python3 Repositorio_Instancias/bookinfo/src/productpage/productpage_monolith.py 9080"],shell=True)
+call(["sudo python3 practica_creativa2/bookinfo/src/productpage/productpage_monolith.py 9080"],shell=True)
