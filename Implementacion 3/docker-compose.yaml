@@ -7,6 +7,8 @@ services:
       - "9080:9080"
     environment:
       - GROUPO_NUMERO=03
+    dockerfile:
+      -Dockerfile
 
   details:
     build: ./details
@@ -15,6 +17,8 @@ services:
     environment:
       - SERVICE_VERSION=v1
       - ENABLE_EXTERNAL_BOOK_SERVICE=true
+    dockerfile:
+      -Dockerfile
 
   reviews:
     build: ./reviews
@@ -23,6 +27,8 @@ services:
     environment:
       - SERVICE_VERSION=v1
       - ENABLE_RATINGS=true
+    dockerfile:
+      -Dockerfile
 
   ratings:
     build: ./ratings
@@ -30,3 +36,5 @@ services:
       - "9083:9080"
     environment:
       - SERVICE_VERSION=v1
+    dockerfile:
+      -Dockerfile 
