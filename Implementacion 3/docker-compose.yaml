@@ -17,7 +17,7 @@ services:
       - ENABLE_EXTERNAL_BOOK_SERVICE=true
     
   reviews:
-    build: ./reviews
+    build: ./reviews/reviews-wlpcfg
     ports:
       - "9082:9080"
     environment:
