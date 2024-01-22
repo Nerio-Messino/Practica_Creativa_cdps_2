@@ -21,7 +21,7 @@ services:
     ports:
       - "9082:9080"
     environment:
-      - SERVICE_VERSION=v1
+      - SERVICE_VERSION=v2
       - ENABLE_RATINGS=true
     
   ratings:
