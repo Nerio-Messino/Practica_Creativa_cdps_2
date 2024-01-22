@@ -21,9 +21,9 @@ services:
     ports:
       - "9082:9080"
     environment:
-      - SERVICE_VERSION=v1
       - ENABLE_RATINGS=true
-    
+      - SERVICE_VERSION=v3
+      - STAR_COLOR=red
   ratings:
     build: ./ratings
     ports:
