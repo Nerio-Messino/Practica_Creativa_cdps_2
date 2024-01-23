@@ -1,4 +1,4 @@
-FROM node:12.18.1-slim
+FROM node:16
 WORKDIR /opt/microservices
 COPY package.json .
 COPY ratings.js .
