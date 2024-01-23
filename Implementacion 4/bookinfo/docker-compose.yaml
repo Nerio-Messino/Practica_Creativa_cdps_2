@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  productpage:
+    build: ./productpage
+    ports:
+      - "9080:9080"
+    environment:
+      - GROUPO_NUMERO=03
+
+  details:
+    build: ./details
+    ports:
+      - "9081:9080"
+    environment:
+      - SERVICE_VERSION=v1
+      - ENABLE_EXTERNAL_BOOK_SERVICE=true
+    
+  reviews:
+    build: ./reviews/reviews-wlpcfg
+    ports:
+      - "9082:9080"
+    environment:
+      - ENABLE_RATINGS=true
+      - SERVICE_VERSION=v3
+      - STAR_COLOR=red
+  ratings:
+    build: ./ratings
+    ports:
+      - "9083:9080"
+    environment:
+      - SERVICE_VERSION=v1
+    
